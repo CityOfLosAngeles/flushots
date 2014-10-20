@@ -47,7 +47,7 @@
 		// Defined style types passed to TkMap
 		styles:'grey minlabels',
 		// Initial zoom level for the Google map
-		zoom:12,
+		zoom:10,
 		// Zoom for finding address
 		zoomaddress:14
 	};
