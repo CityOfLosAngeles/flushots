@@ -5,7 +5,7 @@
 	 */
 	var Default = {
 		// City
-		city:'Chicago',
+		city:'Los Angeles',
 		// DOM ID of where the Google Map is to be rendered
 		domid:'map',
 		// Google Fusion Tables SQL-like query string for flu shot location data
@@ -39,11 +39,11 @@
 			enableEventPropagation: false
 		},
 		// Start center latutude of the Google map
-		lat:41.875,
+		lat:34.05,
 		// Start center longitude of the Google map
-		lng:-87.6425,
+		lng:-118.250,
 		// State
-		state:'Illinois',
+		state:'California',
 		// Defined style types passed to TkMap
 		styles:'grey minlabels',
 		// Initial zoom level for the Google map
