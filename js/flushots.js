@@ -1,3 +1,4 @@
+
 /**
  * @classDestription - Placeholder for Flu Shot application variables and functions.
  * @class - Flushot
@@ -46,7 +47,7 @@ var Flushots = (function($) {
 				this.Events[i].latlng = new google.maps.LatLng(this.Events[i].data.latitude,this.Events[i].data.longitude);
 				// Create the markers for each event
 				var icon = 'img/red.png';
-				if($.trim(this.Events[i].data.cost.toLowerCase()) === 'free')
+				if($.trim(this.Events[i].data.cost.toLowerCase()).search(/no cost/) > -1 && $.trim(this.Events[i].data.cost.toLowerCase()).length > 0)
 				{
 					icon = 'img/blue.png';
 				}
@@ -209,7 +210,7 @@ var Flushots = (function($) {
 			controlDiv.style.padding = '1em';
 			// Set CSS for the control border.
 			var controlUI = document.createElement('div');
-			controlUI.style.backgroundColor = 'rgba(255,255,255,0.7)';
+			controlUI.style.backgroundColor = 'rgb(255,255,255)';
 			//controlUI.style.color = 'white';
 			controlUI.style.borderStyle = 'solid';
 			controlUI.style.borderWidth = '0px';
@@ -227,12 +228,12 @@ var Flushots = (function($) {
 			controlText.style.paddingRight = '.5em';
 			controlText.style.paddingTop = '.3em';
 			controlText.style.paddingBottom = '.3em';
-			controlText.innerHTML = '<div>Free<img src="img/blue.png" /></div>';
+			controlText.innerHTML = '<div><a data-toggle="modal" href="#modal-fee">No Cost To You</a><img src="img/blue.png" /></div>';
 			controlUI.appendChild(controlText);
 		// Setup the click event listeners.
-			google.maps.event.addDomListener(controlUI, 'click', function() {
-				Map.Map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear();
-			});
+		//	google.maps.event.addDomListener(controlUI, 'click', function() {
+		//		Map.Map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear();
+		//	});
 		};
 		
 		this.setMarkersByDay = function(day)
@@ -278,7 +279,7 @@ var Flushots = (function($) {
 				)
 				{
 					// See if it is a free event
-					if($.trim(this.Events[i].data.cost.toLowerCase()) === 'free')
+					if($.trim(this.Events[i].data.cost.toLowerCase()).search(/no cost/) > -1 && $.trim(this.Events[i].data.cost.toLowerCase()).length > 0)
 					{
 						this.Events[i].marker.setIcon('img/blue.png');
 					}
@@ -318,7 +319,7 @@ var Flushots = (function($) {
 				)
 				{
 					// See if it is a free event
-					if($.trim(this.Events[i].data.cost.toLowerCase()) === 'free')
+					if($.trim(this.Events[i].data.cost.toLowerCase()).search(/no cost/) > -1 && $.trim(this.Events[i].data.cost.toLowerCase()).length > 0)
 					{
 						this.Events[i].marker.setIcon('img/blue.png');
 					}
