@@ -167,7 +167,7 @@ $.extend(iCalendar.prototype, {
 			var url = (site.url == 'echo' ? '#' : url);
 			var item = $('<span></span>');
 			var anchor = $('<a href="' + url + '" title="' + settings.tipPrefix + site.display + '"' +
-				(site.url == 'echo' ? '' : ' target="' + settings._target + '"') + 'style="color:#22f;"></a>');
+				(site.url == 'echo' ? '' : ' target="' + settings._target + '"') + 'style="color:#8CF;"></a>');
 			if (site.url == 'echo') {
 				anchor.click(function() {
 					// Record a Calendar Reminder

@@ -26,8 +26,8 @@ var Event = (function($){
 				}
 				else
 				{
-					ThisEvent.infoboxtext = '<div class="infoBox" style="border:2px solid rgb(16,16,16); margin-top:8px; background:#ddd; padding:5px; font-family:Helvetica Neue,Helvetica,Arial,sans-serif">';
-					if(ThisEvent.data.url !== '') { ThisEvent.infoboxtext += '<a href="'+ThisEvent.data.url+'" target="_blank" style="color:#22f">More Information</a>'; }
+					ThisEvent.infoboxtext = '<div class="infoBox" style="border:2px solid rgb(16,16,16); margin-top:8px; background:white; padding:5px; font-family:Helvetica Neue,Helvetica,Arial,sans-serif">';
+					if(ThisEvent.data.url !== '') { ThisEvent.infoboxtext += '<a href="'+ThisEvent.data.url+'" target="_blank" style="color:#8CF">More Information</a>'; }
 					if(ThisEvent.data.url !== '' && (ThisEvent.data.begin_date === ThisEvent.data.end_date)) { ThisEvent.infoboxtext += ' | ';}
 					if(ThisEvent.data.begin_date === ThisEvent.data.end_date) { ThisEvent.infoboxtext += '<span id="ical-'+ThisEvent.data.id+'" class="ical"></span>'; }
 					ThisEvent.infoboxtext += '<br><span style="font-size:133%">'+ThisEvent.data.facility_name+'</span>';
@@ -60,9 +60,9 @@ var Event = (function($){
 					ThisEvent.infoboxtext += '<br><a class="directions" href="http://www.google.com/maps?';
 					if($('#nav-address').val() !== '')
 					{
-						ThisEvent.infoboxtext += 'saddr='+$('#nav-address').val()+' Chicago, IL&';
+						ThisEvent.infoboxtext += 'saddr='+$('#nav-address').val()+' Las Angeles, CA&';
 					}
-					ThisEvent.infoboxtext += 'daddr='+ThisEvent.data.street1+' '+ThisEvent.data.city+', '+ThisEvent.data.state+' '+ThisEvent.data.postal_code+'" target="_blank" style="color:#22f">Get Directions</a>';
+					ThisEvent.infoboxtext += 'daddr='+ThisEvent.data.street1+' '+ThisEvent.data.city+', '+ThisEvent.data.state+' '+ThisEvent.data.postal_code+'" target="_blank" style="color:#8CF">Get Directions</a>';
 					ThisEvent.infoboxtext += '</div>';
 					ThisEvent.infobox.setContent(ThisEvent.infoboxtext);
 					ThisEvent.infobox.open(Map,ThisEvent.marker);
