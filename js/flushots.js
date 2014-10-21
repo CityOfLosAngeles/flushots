@@ -228,7 +228,7 @@ var Flushots = (function($) {
 			controlText.style.paddingRight = '.5em';
 			controlText.style.paddingTop = '.3em';
 			controlText.style.paddingBottom = '.3em';
-			controlText.innerHTML = '<div><a data-toggle="modal" href="#modal-fee">No Cost To You</a><img src="img/blue.png" /></div>';
+			controlText.innerHTML = '<div><a data-toggle="modal" href="#modal-fee">Upcoming Immunization Location</a><img src="img/blue.png" /></div>';
 			controlUI.appendChild(controlText);
 		// Setup the click event listeners.
 		//	google.maps.event.addDomListener(controlUI, 'click', function() {
